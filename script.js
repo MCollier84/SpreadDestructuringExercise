@@ -13,7 +13,8 @@ const starWarsShows = [
 // 1c 
 const disneyPlusShows = [
     ...mcuShows,
-    ...starWarsShows
+    ...starWarsShows,
+    "Monsters At Work"
 ];
 
 // 1d
@@ -35,7 +36,7 @@ const amazonPrimeMovies = {
 const streamingMovies = {
     ...amazonPrimeMovies,
     ...netflixMovies, 
-    musical: "Hamilton",
+    musical: "Hamilton"
 };
 
 // 2d
@@ -52,10 +53,12 @@ const [mickey, spidey] = disneyJunior;
 
 // 3c 
 console.log(mickey, spidey);
+console.log(disneyJunior);
 
 // 4a 
 const avengers = {
-    warMachine: "James Rhodes", theHulk: "Bruce Banner"
+    warMachine: "James Rhodes", 
+    theHulk: "Bruce Banner"
 }; 
 
 // 4b 
@@ -79,7 +82,9 @@ console.log(nat, others);
 
 // Bonus 
 const bonus = {
-    first: [1, 2, 3], second: [4, 5, 6], third: [7, 8, 9]
+    first: [1, 2, 3], 
+    second: [4, 5, 6], 
+    third: [7, 8, 9]
   };
 
 // 5a 
@@ -88,8 +93,28 @@ const all = [
     ...bonus["second"],
     ...bonus["third"]
 ];
+// OR
+// const all = [
+//     ...bonus.first,
+//     ...bonus.second,
+//     ...bonus.third
+
+// ];
+
+console.log(all);
 
 // 5b 
-const [one, two, three, four, five, six, seven, eight, nine] = all;
+// const [one, two, three, four, five, six, seven, eight, nine] = all;
 
-console.log(one);
+// Or
+// const {first, second, third} = bonus;
+// const [one, two, three] = first;
+// const [four, five, six] = second;
+// const [seven, eight, nine] = third;
+
+// Or
+const [one, two, three] = bonus.first;
+const [four, five, six] = bonus.second;
+const [seven, eight, nine] = bonus.third;
+
+console.log(one, two, three, four, five, six, seven, eight, nine);
